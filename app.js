@@ -20,7 +20,7 @@ async function carregarProdutos() {
         });
   
         card.innerHTML = `
-          <img src="./img/${prod.imagem}" alt="${prod.nome}">
+          <img src="/${prod.imagem}" alt="${prod.nome}">
           <h3>${prod.nome}</h3>
           <p>${prod.descricao}</p>
           <div class="stars">${estrelas}</div>
@@ -31,5 +31,8 @@ async function carregarProdutos() {
       });
     } catch (error) {
       console.error("Erro ao carregar produtos:", error);
+      
     }
+    
   }
+  carregarProdutos();
